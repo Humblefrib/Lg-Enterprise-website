@@ -1,0 +1,792 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@media(max-width: 700px)
+{
+    .hideOnMobile
+    {
+        display: none;
+    }
+
+    .sideBarElementsContainer
+    {
+        transform: right 50px;
+    }
+}
+
+@media(max-width: 400px)
+{
+    .sideBar
+    {
+        width: 100%;
+    }
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+nav
+{
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+    padding-bottom: 30px;
+    transition: all 0.4s ease 0.05s;
+    background-image: linear-gradient(to bottom right, rgb(255, 255, 255), rgba(226, 226, 226, 0.7), rgba(200, 200, 200, 0.4));
+}
+
+nav ul
+{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li
+{
+    height: 50px;
+}
+
+nav li:first-child
+{
+    margin-right: auto;
+}
+
+nav a
+{
+    height: 100%;
+    padding: 0 30px;
+    display: flex;
+    text-decoration: none;
+    font-size: 20px;
+    align-items: center;
+    color: black;
+    transition: all 0.4s ease 0s;
+}
+
+.logo
+{
+    padding-top: 30px;
+    width: 85px;
+}
+
+.mainBodyHeader
+{
+    padding-top: 3em;
+}
+
+.sideBar
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sideBar li
+{
+    width: 100%;
+}
+
+.sideBar a
+{
+    width: 100%;
+}
+
+.contactBtn
+{
+    padding: 1em 2em;
+    background-color: #202020;
+    border: none;
+    color: #f0f0f0;
+    border-radius: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -10px;
+}
+
+.contactBtn::after
+{
+    content:"";
+    position: absolute;
+    right: -3px;
+    height: 111%;
+    width: 106%;
+    border-radius: 1000px;
+    background-image: linear-gradient(to bottom right, rgba(255, 149, 0, 1), rgba(0, 128, 255, 1));
+    z-index: -1;
+}
+
+.contactBtn:hover
+{
+    z-index: 0;
+    box-shadow: 40px 0 100px rgba(0, 128, 255, 1), 40px 0 100px rgba(255, 149, 0, 1);
+}
+
+.introParagraph
+{
+    padding-left: 1em;
+    padding: 0 50px 0 50px;
+}
+
+.introParagraphHeader
+{
+    font-size: 3em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.introParagraphWords
+{
+    background-color: rgb(211, 251, 255);
+    border-radius: 25px;
+    border: 3px solid rgb(0, 0, 0);
+    border-style: dashed;
+}
+
+.introParagraphWords p
+{
+    text-align: center;
+    padding: 1.5em;
+}
+
+.introParagraph h2
+{
+    font-size: 1.7em;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+
+.introParagraph h3
+{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    font-size: 1.5em;
+}
+
+.introParagraph h3:first-child
+{
+    padding-top: none;
+}
+
+.introParagraph p
+{
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-size: 1.1em;
+    padding-left: 1.3em;
+}
+
+.introParagraph li
+{
+    margin-left: 1em;
+    list-style: none;
+}
+
+.introParagraph p:first-child
+{
+    padding-top: none;
+}
+
+.body
+{
+    padding-top: 8em;
+    background-color: rgb(230, 230, 230);
+
+}
+
+/* Start of MainPage */
+
+.mainPageBody
+{
+    min-height: 100vh;
+    background-color: rgb(230, 230, 230);
+}
+
+.mainIntroContainer
+{
+    padding-left: 1em;
+    padding: 0 50px 0 50px;
+    background-color: white;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
+    margin: 1em;
+}
+
+.mainIntroductionContainer
+{
+    padding: 100px 0 100px 0;
+    display: flex;
+    align-items: center;
+    background-color: rgb(230, 230, 230);
+}
+
+.mainIntroductionWords
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.bodyHeader1
+{
+    font-weight: bolder;
+    padding: 0 100px 20px 100px;
+    font-size: 6em;
+    text-shadow: 50px 30px 20px rgba(0, 0, 0, 0.5);
+}
+
+.bodyHeader2
+{
+    padding: 0 100px 0 150px;
+    font-size: 4em;
+    font-weight: bolder;
+    text-shadow: 50px 30px 20px rgba(0, 0, 0, 0.5);
+
+}
+
+.mainIntroductionAnimation
+{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+}
+
+.contentImgContainer
+{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 6em;
+}
+
+.contentImgContainer img
+{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid black;
+    margin: 0.5em;
+    box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.5);
+}
+
+.visionStatementContainer
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 7em;
+    padding-bottom: 7em;
+}
+
+.visionStatementHeader
+{
+    width: 500px;
+    height: 100px;
+    text-align: center;
+    background-color: white;
+    font-size: 3em;
+    font-weight: bolder;
+    padding-top: 35px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.visionStatement
+{
+    display: flex;
+    width: 300px;
+    height: 150px;
+    text-align: center;
+    background-color: white;
+    font-size: 1.5em;
+    font-weight: bolder;
+    margin-top: 1em;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* End of MainPage */
+
+.aboutBody
+{
+    background-color: white;
+    padding-top: 100px;
+}
+
+.aboutLink:hover
+{
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    transition: all 0.5s ease 0s;
+}
+
+.aboutBodyHeader
+{
+    text-align: center;
+    font-size: 5em;
+    padding-bottom: 1.5em;
+    color: #272727;
+}
+
+.strategyVisionHeader
+{
+    font-size: 2.5em;
+    font-weight: bolder;
+    color: #272727;
+}
+
+.descriptionSelectorContainer
+{
+    width: 100%;
+    max-height: 700px;
+    background-color: rgb(230, 230, 230);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.3);
+}
+
+.descriptions
+{
+    max-width: 750px;
+    max-height: 400px;
+    background-color: white;
+    margin: 2em;
+    border: 2px solid black;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 30px;
+}
+
+.description
+{
+    display: none;
+    text-align: center;
+    padding: 1em;
+}
+
+.sideBarElementsContainer
+{
+    width: 270px;
+    height: 185px;
+    background-color: white;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.3);
+    margin: 2em;
+}
+
+.sideBarElementsContainer div
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: bolder;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+}
+
+.sideBarElementsContainer div:hover
+{
+    cursor: pointer;
+    background-color: rgb(193, 193, 193);
+}
+
+.description2
+{
+    padding-top: 5em;
+}
+
+.growthStrategyContainer
+{
+    background-color: white;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.3);
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.growthStrategyHeader
+{
+    display: flex;
+    justify-content: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #272727;
+    padding-bottom: 1.5em;
+    padding-top: 0.8em;
+}
+
+.growthStrategyParagraph
+{
+    margin-top: 1.1em;
+    padding: 0 1em 2em 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.growthStrategyParagraph span
+{
+    text-align: center;
+    padding: 1em;
+    border: 2px solid black;
+    border-radius: 1000px;
+    background-color: rgb(211, 251, 255);
+}
+
+/* End of About */
+
+.indexBody
+{
+    min-height: 100vh;
+    background-image: url("Images/skyscraper-3219456.jpg");
+    background-color: rgba(155, 155, 155, 0.5);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.indexLink:hover
+{
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    transition: all 0.5s ease 0s;
+}
+
+.indexBodyHeader
+{
+    text-align: center;
+    font-size: 5em;
+    padding-bottom: 1.5em;
+    color: #272727;
+}
+
+.indexBodysection1Container
+{
+    padding-left: 1em;
+    padding: 0 50px 30px 50px;
+    background-color: white;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
+    margin: 1em;
+}
+
+.indexBodysection1ContainerHeader
+{
+    display: flex;
+    justify-content: center;
+    font-size: 3em;
+    padding: 1.2em;
+    font-weight: bolder;
+}
+
+.indexBodysection1Container li
+{
+    list-style: disc;
+}
+
+.servicesSectionContainer
+{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.servicesContainer
+{
+    max-width: 600px;
+}
+
+.extinguisherImg img
+{
+    width: 300px;
+    height: 200px;
+}
+
+.indexSubSection
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.indexScrollContainer
+{
+    width: 97%;
+    height: 400px;
+    overflow-y: scroll;
+    background-color: rgba(212, 212, 212, 0.5);
+    padding: 1.5em;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.BusinessCompetitivenessContainer
+{
+    background-color: rgba(212, 212, 212, 0.5);
+    margin: 1em;
+    margin-top: 4em;
+    margin-bottom: 2em;
+    padding: 0.5em;
+    width: 500px;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.BusinessCompetitivenessHeader
+{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    padding: 1.2em;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.BusinessCompetitiveness
+{
+    text-align: center;
+}
+
+.QualityPoliciesContainer
+{
+    background-color: rgba(212, 212, 212, 0.5);
+    margin: 1em;
+    margin-top: 4em;
+    margin-bottom: 2em;
+    padding: 0.5em;
+    width: 500px;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.QualityPoliciesHeader
+{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    padding: 1.2em;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.QualityPolicies
+{
+    text-align: center;
+}
+
+/* End of Index */
+
+.managementOwnershipBody
+{
+    min-height: 100vh;
+    background-image: url("Images/skyscraper-8373617_1920.jpg");
+    background-color: rgba(155, 155, 155, 0.5);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+}
+
+.ownershipLink:hover
+{
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    transition: all 0.5s ease 0s;
+}
+
+.OwnershipContainer
+{
+    background-color: white;
+    width: 100%;
+    background-color: rgb(230, 230, 230);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.ProjectsCompletedTable li
+{
+    list-style: decimal;
+}
+
+.OwnershipBodyHeader
+{
+    text-align: center;
+    font-size: 5em;
+    padding-bottom: 1.5em;
+    padding-top: 2.5em;
+    color: #272727;
+}
+
+.directors
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+    background-color: rgba(212, 212, 212, 0.5);
+    max-width: 85%;
+    margin-bottom: 10em;
+}
+
+.excellentContainer
+{
+    max-width: 80%;
+    max-height: 870px;
+    padding: 0em 2em 3em 0.8em;
+    margin: 2em;
+    background-color: rgba(239, 239, 239, 0.4);
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.rudyContainer
+{
+    max-width: 80%;
+    max-height: 870px;
+    padding: 0em 2em 3em 0.8em;
+    margin: 2em;
+    background-color: rgba(239, 239, 239, 0.4);
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tendaiContainer
+{
+    max-width: 80%;
+    max-height: 870px;
+    padding: 0em 2em 3em 0.8em;
+    margin: 2em;
+    background-color: rgba(239, 239, 239, 0.4);
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.ishmaelContainer
+{
+    max-width: 80%;
+    max-height: 870px;
+    padding: 0em 2em 3em 0.8em;
+    margin: 2em;
+    background-color: rgba(239, 239, 239, 0.4);
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.directors p
+{
+    text-align: center;
+}
+
+.directors li
+{
+    text-align: center;
+    list-style: disc;
+}
+
+.directorsImg
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3em;
+}
+
+.directors h2
+{
+    font-size: 2.2em;
+}
+
+.directors h3
+{
+    text-align: center;
+    font-size: 1.8em;
+}
+
+.directorsImg img
+{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid;
+    background-image: linear-gradient(to top right, rgb(255, 255, 255), rgb(157, 157, 157));
+}
+
+.footer
+{
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+    background-color: rgb(226, 226, 226);
+    display: flex;
+    justify-content: space-around;
+}
+
+.contactDetails
+{
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.contactDetails h2
+{
+    padding-left: 2em;
+    padding-bottom: 0.5em;
+}
+
+.footerSubHeader
+{
+    font-size: 1.2em;
+    font-weight: bolder;
+    margin-left: 2.5em;
+}
+
+.contactDetails li
+{
+    list-style: none;
+    padding-left: 6em;
+}
+
+.streetAddress
+{
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.streetAddress h2
+{
+    padding-left: 2em;
+}
+
+.streetAddress li
+{
+    list-style: none;
+    padding-left: 3em;
+}
